@@ -1,0 +1,35 @@
+# Ignorar la carpeta bin
+/bin/
+
+# Ignorar la carpeta obj
+/obj/
+
+# Archivos de configuración de usuario de Visual Studio
+*.suo
+*.user
+*.userprefs
+
+# Archivos de Visual Studio Code
+.vscode/
+
+# Archivos de build de .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de paquete NuGet
+*.nupkg
+*.snupkg
+packages/*
+
+# Archivos de compilación
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# Archivos de configuración de dependencias
+*.db
+
+# Ignorar carpetas temporales
+~*/
