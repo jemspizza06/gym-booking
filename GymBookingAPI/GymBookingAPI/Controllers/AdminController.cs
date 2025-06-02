@@ -8,7 +8,7 @@ namespace GymBookingAPI.Controllers
 {
     [Route("api/admin")]
     [ApiController]
-    [Authorize(Roles = "Administrador")]
+    //[Authorize(Roles = "Administrador")]
     public class AdminController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -19,6 +19,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // POST: api/admin/clases
+        [Authorize(Roles = "Administrador")]
         [HttpPost("clases")]
         public async Task<IActionResult> CrearClase(Clase clase)
         {
@@ -31,6 +32,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // GET: api/admin/clases
+        [Authorize(Roles = "Administrador,Socio")]
         [HttpGet("clases")]
         public async Task<IActionResult> ObtenerClases()
         {
@@ -39,6 +41,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // PUT: api/admin/clases/5
+        [Authorize(Roles = "Administrador")]
         [HttpPut("clases/{id}")]
         public async Task<IActionResult> EditarClase(int id, Clase claseEditada)
         {
@@ -57,6 +60,7 @@ namespace GymBookingAPI.Controllers
             return Ok(clase);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("clases/{id}")]
         public async Task<IActionResult> EliminarClases(int id)
         {
@@ -67,6 +71,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // PUT: api/admin/clases/5/asignar-entrenador/3
+        [Authorize(Roles = "Administrador")]
         [HttpPut("clases/{claseId}/asignar-entrenador/{entrenadorId}")]
         public async Task<IActionResult> AsignarEntrenador(int claseId, int entrenadorId)
         {
@@ -83,6 +88,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // DELETE: api/admin/cancelar-reserva/5
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("cancelar-reserva/{reservaId}")]
         public async Task<IActionResult> CancelarReservaAdmin(int reservaId)
         {
@@ -96,6 +102,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // GET: api/admin/socios
+        [Authorize(Roles = "Administrador")]
         [HttpGet("socios")]
         public async Task<IActionResult> ObtenerSocios()
         {
@@ -106,6 +113,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // GET: api/admin/entrenadores
+        [Authorize(Roles = "Administrador")]
         [HttpGet("entrenadores")]
         public async Task<IActionResult> ObtenerEntrenadores()
         {
@@ -116,6 +124,7 @@ namespace GymBookingAPI.Controllers
         }
 
         // DELETE: api/admin/eliminar-usuario/5
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("eliminar-usuario/{userId}")]
         public async Task<IActionResult> EliminarUsuario(int userId)
         {

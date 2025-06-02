@@ -56,6 +56,24 @@ namespace GymBookingAPI.Controllers
             return Ok(new { message = "Usuario registrado con éxito" });
         }
 
+        [HttpDelete("delete/{id}")]
+        public async Task<ActionResult<IEnumerable<User>>> DeleteUser(int id)
+        {
+            try
+            {
+                var user = await _context.Users.SingleOrDefaultAsync(u => u.Id == id);
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al eliminar usuario: ",ex);
+            }
+            
+        }
+
         // POST: api/Users/Login
         [HttpPost("Login")]
         public async Task<ActionResult> Login(LoginRequest request)

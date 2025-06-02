@@ -5,11 +5,30 @@ import axios from 'axios';
 import DashboardLayout from '../layouts/DashboardLayout';
 import '../layouts/MainLayout.css'; // reutiliza los estilos del formulario de usuarios
 import toast from 'react-hot-toast';
+import { useAuth } from '../context/AuthContext';
 
 const AdminUsers = () => {
   const [usuarios, setUsuarios] = useState([]);
 //   const [entrenadores, setEntrenadores] = useState([]);
   const [editando, setEditando] = useState(null);
+
+// llamando al usuario logeado en localStorage
+  const almacenUsuario = useAuth()
+
+  const roles = [
+    {
+      id:1,
+      cargo: "Administrador"
+    },
+    {
+      id:2,
+      cargo: "Entrenador"
+    },
+    {
+      id:3,
+      cargo: "Socio"
+    }
+  ]
 
   const [nuevoUsuario, setNuevoUsuario] = useState({
     fullName: '',
@@ -17,6 +36,13 @@ const AdminUsers = () => {
     password: '',
     role: '',
   });
+
+  const [usuarioEditado, setUsuarioEditado] = useState({
+    fullName: '',
+    email: '',
+    passwordHash: '',
+    role: '',
+  })
 
   const token = localStorage.getItem('token');
 
@@ -42,6 +68,22 @@ const AdminUsers = () => {
     }
   } 
 
+  const editarUsuario = () => {
+    return null
+  }
+
+  const eliminarUsuario = async(id) => {
+    try {
+      const response = await apiUsers.delete(`/delete/${id}`);
+      toast.success("Usuario eliminado con exito")
+      obtenerUsuarios();
+    } catch (error) {
+      console.log("Error:",error);
+      toast.error("Error al eliminar usuario")
+    }
+
+  }
+
 //   const editarUsuario = async() => {
 //     try {
 //         const res = await apiUsers.put("")
@@ -60,6 +102,14 @@ const AdminUsers = () => {
     <DashboardLayout>
       <div className="table-container">
         <div className="search-box">
+          {/* Llamndo el nombre del usuario logeado */}
+          {almacenUsuario.user.role == "Socio"?(
+                      <h2>Hola socio: {almacenUsuario.user.fullName}</h2>
+          ):(
+            // <h2>Hola admin: {almacenUsuario.user.fullName}</h2>
+            <>
+            </>
+          )}
           <h2>Crear Nuevo Usuario</h2>
         </div>
         <form
@@ -91,6 +141,7 @@ const AdminUsers = () => {
           />
           <input
             type="password"
+            placeholder="Contrasena"
             value={nuevoUsuario.password}
             onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, password: e.target.value })}
             required
@@ -111,10 +162,8 @@ const AdminUsers = () => {
             <tr>
               <th>Nombre</th>
               <th>Correo</th>
+              <th>Contraseña</th>
               <th>Rol</th>
-              <th>Capacidad</th>
-              <th>Entrenador</th>
-              <th>Asignar</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -124,81 +173,61 @@ const AdminUsers = () => {
                 <td>
                   {editando === usuario.id ? (
                     <input
-                      value={usuario.nombre}
+                      value={usuario.fullName}
                       onChange={(e) =>
                         setUsuarios((prev) =>
-                          prev.map((c) => c.id === usuario.id ? { ...c, nombre: e.target.value } : c)
+                          prev.map((c) => c.id === usuario.id ? { ...c, fullName: e.target.value } : c)
                         )
                       }
                     />
                   ) : (
-                    usuario.nombre
+                    usuario.fullName
                   )}
                 </td>
                 <td>
                   {editando === usuario.id ? (
                     <input
-                      value={usuario.descripcion}
+                      value={usuario.email}
                       onChange={(e) =>
                         setUsuarios((prev) =>
-                          prev.map((c) => c.id === usuario.id ? { ...c, descripcion: e.target.value } : c)
+                          prev.map((c) => c.id === usuario.id ? { ...c, email: e.target.value } : c)
                         )
                       }
                     />
                   ) : (
-                    usuario.descripcion
+                    usuario.email
                   )}
                 </td>
                 <td>
                   {editando === usuario.id ? (
                     <input
-                      type="datetime-local"
-                      value={new Date(usuario.fecha).toISOString().slice(0, 16)}
+                      type="password"
+                      value={usuario.password}
                       onChange={(e) =>
                         setUsuarios((prev) =>
-                          prev.map((c) => c.id === usuario.id ? { ...c, fecha: e.target.value } : c)
+                          prev.map((c) => c.id === usuario.id ? { ...c, password: e.target.value } : c)
                         )
                       }
                     />
                   ) : (
-                    new Date(usuario.fecha).toLocaleString()
+                    usuario.passwordHash
                   )}
                 </td>
-                <td>
-                  {editando === usuario.id ? (
-                    <input
-                      type="number"
-                      value={usuario.capacidadMaxima}
-                      onChange={(e) =>
-                        setUsuarios((prev) =>
-                          prev.map((c) =>
-                            c.id === usuario.id
-                              ? { ...c, capacidadMaxima: parseInt(e.target.value) }
-                              : c
-                          )
-                        )
-                      }
-                    />
-                  ) : (
-                    usuario.capacidadMaxima
-                  )}
-                </td>
-                <td>{usuario.entrenador?.fullName || 'Sin asignar'}</td>
 
                 {/* Realizar modificaciones necesarias para asignar rol */}
-                {/* <td>
+                <td>
                   <select
                     defaultValue=""
-                    onChange={(e) => asignarEntrenador(usuario.id, e.target.value)}
+                    onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, role: e.target.value })}
                   >
                     <option value="" disabled>Seleccionar</option>
-                    {entrenadores.map((ent) => (
-                      <option key={ent.id} value={ent.id}>
-                        {ent.fullName}
+                    {roles.map((rol) => (
+                      <option key={rol.id} value={rol.cargo}>
+                        {rol.cargo}
                       </option>
                     ))}
                   </select>
-                </td> */}
+                </td>
                 <td>
                   <div className="actions">
                     {/* {editando === usuario.id ? (
@@ -221,12 +250,12 @@ const AdminUsers = () => {
                       </>
                     )} */}
                     <>
-                        {/* <button onClick={() => setEditando(usuario.id)} className="btn-edit">
+                        <button onClick={() => setEditando(usuario.id)} className="btn-edit">
                           <FaEdit />
-                        </button> */}
-                        {/* <button onClick={() => eliminarusuario(usuario.id)} className="btn-delete">
+                        </button>
+                        <button onClick={() => eliminarUsuario(usuario.id)} className="btn-delete">
                           <FaTrash />
-                        </button> */}
+                        </button>
                       </>
                   </div>
                 </td>
