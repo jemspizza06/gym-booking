@@ -1,19 +1,44 @@
 // src/pages/ClasesDisponibles.js
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import '../FormStyles.css'; // Reutilizando estilos generales
+import toast from 'react-hot-toast';
 // import { getClases } from '../services/clasesService'; ← si tienes un backend, podrías usar esto
 
 const ClasesDisponibles = () => {
   const [clases, setClases] = useState([]);
 
+  const token = localStorage.getItem('token');
+    
+      // Instancia de axios para solicitudes al backend como administrador
+      const api = axios.create({
+        baseURL: 'http://localhost:5296/api/admin',
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      const apiSocio = axios.create({
+        baseURL: 'http://localhost:5296/api/socio',
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      const obtenerClases = async () => {
+    const res = await api.get('/clases');
+    setClases(res.data);
+  };
+
+  const reservarClase = async(id) => {
+    try {
+          const response = await apiSocio.post(`/reservar/${id}`);
+        toast.success("Clase reservada con exito")
+    } catch (error) {
+        toast.error("Ya tienes una reserva para esta clase")
+    }
+
+  }
+
   // Simulamos datos por ahora
   useEffect(() => {
-    const clasesFake = [
-      { id: 1, nombre: 'Yoga', horario: 'Lunes 18:00', entrenador: 'Ana P.', cupos: 10 },
-      { id: 2, nombre: 'Spinning', horario: 'Martes 19:00', entrenador: 'Carlos M.', cupos: 5 },
-      { id: 3, nombre: 'Zumba', horario: 'Miércoles 17:00', entrenador: 'Laura Q.', cupos: 8 }
-    ];
-    setClases(clasesFake);
+    obtenerClases();
   }, []);
 
   return (
@@ -28,10 +53,10 @@ const ClasesDisponibles = () => {
             boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
           }}>
             <h3>{clase.nombre}</h3>
-            <p><strong>Horario:</strong> {clase.horario}</p>
-            <p><strong>Entrenador:</strong> {clase.entrenador}</p>
-            <p><strong>Cupos disponibles:</strong> {clase.cupos}</p>
-            <button style={{ marginTop: '0.5rem' }}>Inscribirse</button>
+            <p><strong>Fecha:</strong> {clase.fecha}</p>
+            <p><strong>Entrenador:</strong> Mr. Osmar Tito</p>
+            <p><strong>Cupos disponibles:</strong> {clase.capacidadMaxima}</p>
+            <button style={{ marginTop: '0.5rem' }} onClick={() => reservarClase(clase.id)}>Inscribirse</button>
           </div>
         ))}
       </div>

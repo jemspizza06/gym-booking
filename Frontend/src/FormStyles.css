@@ -157,3 +157,107 @@
   background-color: #dc2626;
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.class-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 6px solid #4A90E2;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.class-title {
+  font-size: 1.3rem;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+.dashboard-container {
+  padding: 30px;
+  background-color: #e6f0fa; /* Azul claro suave */
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.dashboard-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-briefing-card {
+  background-color: #ffffff;
+  border-left: 8px solid #4A90E2;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-briefing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-briefing-card h3 {
+  font-size: 1.4rem;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+.dashboard-briefing-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.dashboard-button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px auto 0;  /* 👈 Esto lo centra */
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;       /* 👈 Importante para que funcione el auto-margin */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-button:hover {
+  background-color: #357ABD;
+  transform: translateY(-2px);
+}
+
+.dashboard-button:active {
+  background-color: #2d66a5;
+  transform: scale(0.98);
+}
+
+a {
+  text-decoration: none;
+}

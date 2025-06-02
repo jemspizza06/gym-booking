@@ -11,12 +11,19 @@ const Sidebar = ({ role }) => {
   return (
     <div className="sidebar">
       <ul>
-        <li><Link to="/admin">Inicio</Link></li>
+        {role === 'Administrador'?(
+          <li><Link to="/admin">Inicio</Link></li>
+        ):(
+          <li><Link to="/socio">Inicio</Link></li>
+        )
+        }
+        
 
         {role === 'Administrador' && (
           <>
             <li><Link to="/admin/clases">Gestionar Clases</Link></li>
             <li><Link to="/admin/usuarios">Usuarios</Link></li>
+            <li><Link to="/admin/reservas">Reservas</Link></li>
           </>
         )}
 
@@ -28,8 +35,8 @@ const Sidebar = ({ role }) => {
 
         {role === 'Socio' && (
           <>
-            <li><Link to="/dashboard/clases-vigentes">Clases Disponibles</Link></li>
-            <li><Link to="/dashboard/mis-reservas">Mis Reservas</Link></li>
+            <li><Link to="/socio/clases">Clases Disponibles</Link></li>
+            <li><Link to="/socio/reservas">Mis Reservas</Link></li>
           </>
         )}
 

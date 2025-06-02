@@ -127,6 +127,16 @@
   },
   {
     "ContainingType": "GymBookingAPI.Controllers.AdminController",
+    "Method": "ObtenerReservas",
+    "RelativePath": "api/admin/reservas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GymBookingAPI.Controllers.AdminController",
     "Method": "ObtenerSocios",
     "RelativePath": "api/admin/socios",
     "HttpMethod": "GET",

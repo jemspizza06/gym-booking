@@ -70,6 +70,14 @@ namespace GymBookingAPI.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Administrador")]
+        [HttpGet("reservas")]
+        public async Task<IActionResult> ObtenerReservas()
+        {
+            var reservas = await _context.Reservas.ToListAsync();
+            return Ok(reservas);
+        }
+
         // PUT: api/admin/clases/5/asignar-entrenador/3
         [Authorize(Roles = "Administrador")]
         [HttpPut("clases/{claseId}/asignar-entrenador/{entrenadorId}")]

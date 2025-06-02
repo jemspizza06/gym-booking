@@ -12,6 +12,9 @@ import EntrenadorView from './views/EntrenadorView';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminClases from './views/AdminClases'; 
 import AdminUsers from './views/AdminUsers';
+import AdminReservas from './views/AdminReservas';
+import SocioClases from './views/SocioClases';
+import SocioReservas from './views/SocioReservas';
 
 function App() {
   return (
@@ -36,6 +39,13 @@ function App() {
   </ProtectedRoute>
 
 } />
+<Route path="/admin/reservas" element={
+  <ProtectedRoute allowedRoles={['Administrador']}>
+    {/* Vista pagina para administrar usuarios */}
+    <AdminReservas/>
+  </ProtectedRoute>
+
+} />
 
 
 
@@ -51,6 +61,20 @@ function App() {
               <SocioView />
             </ProtectedRoute>
           }/>
+          <Route path="/socio/clases" element={
+  <ProtectedRoute allowedRoles={['Socio']}>
+    {/* Vista pagina para administrar usuarios */}
+    <SocioClases/>
+  </ProtectedRoute>
+
+} />
+<Route path="/socio/reservas" element={
+  <ProtectedRoute allowedRoles={['Socio']}>
+    {/* Vista pagina para administrar usuarios */}
+    <SocioReservas/>
+  </ProtectedRoute>
+
+} />
 
           <Route path="/entrenador" element={
             <ProtectedRoute allowedRoles={['Entrenador']}>
