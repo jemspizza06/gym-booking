@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import DashboardLayout from '../layouts/DashboardLayout';
 import '../layouts/MainLayout.css'; // reutiliza los estilos del formulario de usuarios
+import toast from 'react-hot-toast';
 
 const AdminClases = () => {
   const [clases, setClases] = useState([]);
@@ -77,6 +78,7 @@ const AdminClases = () => {
 
   const editarClase = async (id, claseEditada) => {
     await api.put(`/clases/${id}`, claseEditada);
+    toast.success("Clase editada con exito");
     setEditando(null);
     obtenerClases();
   };

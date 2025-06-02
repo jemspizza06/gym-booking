@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import DashboardLayout from '../layouts/DashboardLayout';
 import '../layouts/MainLayout.css'; // reutiliza los estilos del formulario de usuarios
+import toast from 'react-hot-toast';
 
 const AdminUsers = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -33,7 +34,8 @@ const AdminUsers = () => {
   const registrarUsuario = async() => {
     try {
     const res = await apiUsers.post("/Register", nuevoUsuario)
-    setNuevoUsuario({ nombre: '', descripcion: '', fecha: '', capacidadMaxima: '' });
+    setNuevoUsuario({ fullName: '', email: '', password: '', role: '' });
+    toast.success("Usuario creado con exito");
     obtenerUsuarios();
     } catch (error) {
               console.error('Error al crear usuario:', error);
@@ -77,27 +79,27 @@ const AdminUsers = () => {
             type="text"
             placeholder="Nombre"
             value={nuevoUsuario.fullName}
-            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, nombre: e.target.value })}
+            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, fullName: e.target.value })}
             required
           />
           <input
             type="text"
             placeholder="Correo"
             value={nuevoUsuario.email}
-            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, descripcion: e.target.value })}
+            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, email: e.target.value })}
             required
           />
           <input
             type="password"
             value={nuevoUsuario.password}
-            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, fecha: e.target.value })}
+            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, password: e.target.value })}
             required
           />
           <input
             type="text"
             placeholder="Rol"
             value={nuevoUsuario.role}
-            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, capacidadMaxima: e.target.value })}
+            onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, role: e.target.value })}
             required
           />
           <button type="submit" className="btn-new">+ Crear Usuario</button>
