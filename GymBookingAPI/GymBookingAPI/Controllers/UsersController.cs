@@ -9,6 +9,8 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
+using Azure.Core;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace GymBookingAPI.Controllers
 {
@@ -54,6 +56,36 @@ namespace GymBookingAPI.Controllers
             await _context.SaveChangesAsync();
 
             return Ok(new { message = "Usuario registrado con éxito" });
+        }
+
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> EditarUsuario(int id, UserDto user)
+        {
+            try
+            {
+                var usuarioEncontrado = await _context.Users.SingleOrDefaultAsync(u => u.Id == id);
+                usuarioEncontrado.FullName = user.FullName;
+                usuarioEncontrado.Email = user.Email;
+                usuarioEncontrado.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.Password);
+                usuarioEncontrado.Role = user.Role;
+
+                var usuarioActualizado = new UserDto
+                {
+                    FullName = usuarioEncontrado.FullName,
+                    Email = usuarioEncontrado.Email,
+                    Password = usuarioEncontrado.PasswordHash,
+                    Role = usuarioEncontrado.Role,
+                };
+                await _context.SaveChangesAsync();
+
+                return Ok(usuarioActualizado);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al editar usuario: ", ex);
+            }
+            
         }
 
         [HttpDelete("delete/{id}")]

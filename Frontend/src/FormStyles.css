@@ -44,7 +44,7 @@
 }
 
 .form-card button:hover {
-  background-color: #2563eb;
+  background-color: #eb2525;
 }
 
 .form-card p {
@@ -63,30 +63,36 @@
 /* ==== Layout general ==== */
 .app-layout {
   display: flex;
+  flex-direction: column; /* cambia de fila a columna */
   height: 100vh;
 }
 
+
 /* ==== Sidebar ==== */
+/* ==== Sidebar (ahora Header horizontal) ==== */
 .sidebar {
-  width: 220px;
+  width: 100%;
   background-color: #1f2937; /* gris oscuro */
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: column;
-}
-
-.sidebar h3 {
-  margin-bottom: 1rem;
+  flex-direction: row; /* dirección horizontal */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
 .sidebar ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   padding: 0;
+  margin: 0;
+  gap: 2rem;
 }
 
 .sidebar li {
-  margin-bottom: 0.75rem;
+  margin: 0;
 }
 
 .sidebar a {
@@ -98,6 +104,7 @@
 .sidebar a:hover {
   text-decoration: underline;
 }
+
 
 /* ==== Main content ==== */
 .main-content {
@@ -135,3 +142,18 @@
 .header button:hover {
   background-color: #dc2626;
 }
+.logout-button {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+}
+

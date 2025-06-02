@@ -40,7 +40,7 @@ const AdminUsers = () => {
   const [usuarioEditado, setUsuarioEditado] = useState({
     fullName: '',
     email: '',
-    passwordHash: '',
+    password: '',
     role: '',
   })
 
@@ -68,8 +68,14 @@ const AdminUsers = () => {
     }
   } 
 
-  const editarUsuario = () => {
-    return null
+  const editarUsuario = async(id, editedUser) => {
+    try {
+      const response = await apiUsers.put(`/update/${id}`, editedUser);
+      toast.success("El usuario fue modificado con exito");
+    } catch (error) {
+      toast.error("Error al modificar usuario.");
+      console.log("Error editando usuario: ",error);
+    }
   }
 
   const eliminarUsuario = async(id) => {
@@ -146,13 +152,25 @@ const AdminUsers = () => {
             onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, password: e.target.value })}
             required
           />
-          <input
+          {/* <input
             type="text"
             placeholder="Rol"
             value={nuevoUsuario.role}
             onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, role: e.target.value })}
             required
-          />
+          /> */}
+            <select
+                    defaultValue=""
+                    onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, role: e.target.value })}
+                  >
+                    <option value="" disabled>Seleccionar</option>
+                    {roles.map((rol) => (
+                      <option key={rol.id} value={rol.cargo}>
+                        {rol.cargo}
+                      </option>
+                    ))}
+            </select>
+          
           <button type="submit" className="btn-new">+ Crear Usuario</button>
         </form>
 
@@ -174,10 +192,10 @@ const AdminUsers = () => {
                   {editando === usuario.id ? (
                     <input
                       value={usuario.fullName}
-                      onChange={(e) =>
-                        setUsuarios((prev) =>
-                          prev.map((c) => c.id === usuario.id ? { ...c, fullName: e.target.value } : c)
-                        )
+                      onChange={(e) => 
+                        { setUsuarios((prev) => prev.map((c) => c.id === usuario.id ? { ...c, fullName: e.target.value } : c));
+                          setUsuarioEditado({...usuarioEditado, fullName: e.target.value})
+                      }
                       }
                     />
                   ) : (
@@ -188,10 +206,10 @@ const AdminUsers = () => {
                   {editando === usuario.id ? (
                     <input
                       value={usuario.email}
-                      onChange={(e) =>
-                        setUsuarios((prev) =>
-                          prev.map((c) => c.id === usuario.id ? { ...c, email: e.target.value } : c)
-                        )
+                      onChange={(e) => 
+                        { setUsuarios((prev) => prev.map((c) => c.id === usuario.id ? { ...c, email: e.target.value } : c));
+                          setUsuarioEditado({...usuarioEditado, email: e.target.value})
+                      }
                       }
                     />
                   ) : (
@@ -203,10 +221,10 @@ const AdminUsers = () => {
                     <input
                       type="password"
                       value={usuario.password}
-                      onChange={(e) =>
-                        setUsuarios((prev) =>
-                          prev.map((c) => c.id === usuario.id ? { ...c, password: e.target.value } : c)
-                        )
+                      onChange={(e) => 
+                        { setUsuarios((prev) => prev.map((c) => c.id === usuario.id ? { ...c, password: e.target.value } : c));
+                          setUsuarioEditado({...usuarioEditado, password: e.target.value})
+                        }
                       }
                     />
                   ) : (
@@ -218,9 +236,9 @@ const AdminUsers = () => {
                 <td>
                   <select
                     defaultValue=""
-                    onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, role: e.target.value })}
+                    onChange={(e) => setUsuarioEditado({ ...usuarioEditado, role: e.target.value })}
                   >
-                    <option value="" disabled>Seleccionar</option>
+                    <option value="" disabled>{usuario.role}</option>
                     {roles.map((rol) => (
                       <option key={rol.id} value={rol.cargo}>
                         {rol.cargo}
@@ -230,9 +248,9 @@ const AdminUsers = () => {
                 </td>
                 <td>
                   <div className="actions">
-                    {/* {editando === usuario.id ? (
+                    {editando === usuario.id ? (
                     <>
-                        <button onClick={() => editarUsuario(usuario.id, usuario)} className="btn-edit">
+                        <button onClick={() => editarUsuario(usuario.id, usuarioEditado)} className="btn-edit">
                           <FaSave />
                         </button>
                         <button onClick={() => setEditando(null)} className="btn-delete">
@@ -244,19 +262,19 @@ const AdminUsers = () => {
                         <button onClick={() => setEditando(usuario.id)} className="btn-edit">
                           <FaEdit />
                         </button>
-                        <button onClick={() => eliminarusuario(usuario.id)} className="btn-delete">
+                        <button onClick={() => eliminarUsuario(usuario.id)} className="btn-delete">
                           <FaTrash />
                         </button>
                       </>
-                    )} */}
-                    <>
+                    )}
+                    {/* <>
                         <button onClick={() => setEditando(usuario.id)} className="btn-edit">
                           <FaEdit />
                         </button>
                         <button onClick={() => eliminarUsuario(usuario.id)} className="btn-delete">
                           <FaTrash />
                         </button>
-                      </>
+                      </> */}
                   </div>
                 </td>
               </tr>

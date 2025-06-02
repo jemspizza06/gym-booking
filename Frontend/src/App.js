@@ -29,7 +29,7 @@ function App() {
   </ProtectedRoute>
 
 } />
-<Route path="/dashboard/usuarios" element={
+<Route path="/admin/usuarios" element={
   <ProtectedRoute allowedRoles={['Administrador']}>
     {/* Vista pagina para administrar usuarios */}
     <AdminUsers/>

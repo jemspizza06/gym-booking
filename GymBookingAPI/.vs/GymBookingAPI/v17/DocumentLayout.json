@@ -7,20 +7,28 @@
       "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\controllers\\sociocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\controllers\\sociocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -51,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|solutionrelative:gymbookingapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D0CC2AE-398B-42B6-B16C-79FA7C4D61A1}|GymBookingAPI\\GymBookingAPI.csproj|c:\\universidad\\gym-booking\\gymbookingapi\\gymbookingapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,56 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Models\\User.cs",
-              "RelativeDocumentMoniker": "GymBookingAPI\\Models\\User.cs",
-              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Models\\User.cs",
-              "RelativeToolTip": "GymBookingAPI\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T03:06:50.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "GymBookingAPI\\appsettings.json",
-              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.json",
-              "RelativeToolTip": "GymBookingAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-31T03:12:11.692Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "GymBookingAPI\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwEUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAqwFAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T03:56:14.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "GymBookingAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.Development.json",
-              "RelativeToolTip": "GymBookingAPI\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-02T16:36:00.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SocioController.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\SocioController.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Controllers\\SocioController.cs",
@@ -184,20 +148,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\AdminController.cs",
               "RelativeToolTip": "GymBookingAPI\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDgAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwEwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T20:02:47.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Clase.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Models\\Clase.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Models\\Clase.cs",
@@ -209,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Program.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Program.cs",
@@ -217,12 +181,36 @@
               "RelativeToolTip": "GymBookingAPI\\Program.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAEwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T03:13:06.532Z",
+              "WhenOpened": "2025-05-31T03:13:06.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "GymBookingAPI\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "GymBookingAPI\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T03:53:29.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GymBookingAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.Development.json",
+              "RelativeToolTip": "GymBookingAPI\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-02T16:36:00.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Reserva.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Models\\Reserva.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Models\\Reserva.cs",
@@ -234,7 +222,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "GymBookingAPI\\appsettings.json",
+              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\appsettings.json",
+              "RelativeToolTip": "GymBookingAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-31T03:12:11.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "GymBookingAPI\\Models\\User.cs",
+              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Models\\User.cs",
+              "RelativeToolTip": "GymBookingAPI\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T03:06:50.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "EntrenadorController.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\EntrenadorController.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Controllers\\EntrenadorController.cs",
@@ -246,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Controllers\\DashboardController.cs",
@@ -258,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Services\\UserService.cs",
@@ -270,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "20250602010633_UltimaMigracionLimpia.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Migrations\\20250602010633_UltimaMigracionLimpia.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Migrations\\20250602010633_UltimaMigracionLimpia.cs",
@@ -282,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "GymBookingAPI\\Data\\AppDbContext.cs",
@@ -291,18 +305,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T03:08:04.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "GymBookingAPI\\DTOs\\UserDto.cs",
-              "ToolTip": "C:\\universidad\\gym-booking\\GymBookingAPI\\GymBookingAPI\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "GymBookingAPI\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T03:53:29.14Z"
             },
             {
               "$type": "Document",
